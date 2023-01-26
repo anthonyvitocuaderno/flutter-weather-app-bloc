@@ -1,0 +1,9 @@
+{
+  "es": [
+    "welcome_greeting"
+  ],
+
+  "fr": [
+    "welcome_greeting"
+  ]
+}
