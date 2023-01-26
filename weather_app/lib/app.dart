@@ -77,7 +77,9 @@ class _AppViewState extends State<AppView> {
               case AuthenticationStatus.authenticated:
                 _navigator.pushAndRemoveUntil<void>(
                   HomePage.route(),
-                      (route) => false,
+                      (route) {
+                        return false;
+                      },
                 );
                 break;
               case AuthenticationStatus.unauthenticated:

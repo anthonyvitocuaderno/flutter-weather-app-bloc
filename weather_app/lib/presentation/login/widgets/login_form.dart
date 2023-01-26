@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 import 'package:weather_app/presentation/login/bloc/login_bloc.dart';
+import 'package:weather_app/util/string_utils.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
@@ -43,10 +44,9 @@ class _LoginButton extends StatelessWidget {
             : ElevatedButton(
           key: const Key('loginForm_continue_raisedButton'),
           onPressed: () {
-            print('Test');
             context.read<LoginBloc>().add(const LoginSubmitted());
           },
-          child: const Text('Login'),
+          child: Text(getStrings(context).login),
         );
       },
     );

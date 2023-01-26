@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Weather Forecast')),
+      appBar: AppBar(title: Text(getStrings(context).title)),
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: BlocProvider(

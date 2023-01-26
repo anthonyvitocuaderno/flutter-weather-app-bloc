@@ -1,3 +1,9 @@
 {
-    "welcome_greeting": "Welcome to the weather forecast web application. Please begin with your Github user to use the application and widgets the weather in your city."
+    "title": "Weather Forecast",
+    "welcome_greeting": "Welcome to the weather forecast web application. Please begin with your Github user to use the application and widgets the weather in your city.",
+    "logout": "Logout",
+    "login": "Login",
+    "weather_search_button_text": "Display Weather",
+    "city": "City",
+    "back": "Back"
 }

@@ -42,6 +42,8 @@ dependencies:
     path: packages/authentication_repository
   user_repository:
     path: packages/user_repository
+  weather_repository:
+    path: packages/weather_repository
 
   # BLoC essentials
   flutter_bloc: ^8.1.1

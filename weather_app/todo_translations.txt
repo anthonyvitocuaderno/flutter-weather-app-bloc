@@ -1,9 +1,21 @@
 {
   "es": [
-    "welcome_greeting"
+    "title",
+    "welcome_greeting",
+    "logout",
+    "login",
+    "weather_search_button_text",
+    "city",
+    "back"
   ],
 
   "fr": [
-    "welcome_greeting"
+    "title",
+    "welcome_greeting",
+    "logout",
+    "login",
+    "weather_search_button_text",
+    "city",
+    "back"
   ]
 }
