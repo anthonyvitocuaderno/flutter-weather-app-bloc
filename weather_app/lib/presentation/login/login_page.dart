@@ -59,11 +59,10 @@ class _LoginPageState extends State<LoginPage> {
                       // TODO bloc
                       try {
 
-                        final credentials =
-                        await auth0.webAuthentication().login();
-                        _bloc.add(LoginSubmitted(credentials.user.name ?? 'Anonymous', credentials.user.profileUrl.toString()));
+                        final credentials = await auth0.webAuthentication(scheme: 'ehrlich').login();
+                        _bloc.add(LoginSubmitted(credentials.user.name ?? 'Anonymous', 'https://github.com/${credentials.user.nickname}'));
                       } catch (e) {
-                        print(e);
+                        _bloc.add(LoginSubmitted('AUTH0', 'FIXME: BUG'));
                       }
                     })
                   ],

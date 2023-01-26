@@ -25,7 +25,12 @@ class _LogoutButton extends StatelessWidget {
       child: Text(getStrings(context).logout),
       onPressed: () async {
         // TODO log out confirmation dialog
-        // await auth0.webAuthentication().logout();
+        try {
+
+          await auth0.webAuthentication(scheme: 'ehrlich').logout();
+        } catch (e) {
+          print(e);
+        }
         context
             .read<AuthenticationBloc>()
             .add(AuthenticationLogoutRequested());
