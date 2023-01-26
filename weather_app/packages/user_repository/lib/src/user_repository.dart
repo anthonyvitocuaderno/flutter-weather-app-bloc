@@ -8,8 +8,12 @@ class UserRepository {
   Future<User?> getUser() async {
     if (_user != null) return _user;
     return Future.delayed(
-      const Duration(milliseconds: 300),
+      const Duration(milliseconds: 100),
           () => _user = User('John Doe', 'https://github.com/johndoe'),
     );
+  }
+
+  Future<void> setUser(String name, String url) async {
+    _user = User(name, url);
   }
 }

@@ -40,13 +40,13 @@ class _Table extends StatelessWidget {
             TableCell(
                 child: Padding(
                   padding: EdgeInsets.all(8),
-                  child: Text('Date(mm/dd/yyyy)', style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: Text('Date (mm/dd/yyyy)', style: TextStyle(fontWeight: FontWeight.bold)),
                 )
             ),
             TableCell(
                 child: Padding(
                   padding: EdgeInsets.all(8),
-                  child: Text('Temp(F)', style: TextStyle(fontWeight: FontWeight.bold),),
+                  child: Text('Temperature (F)', style: TextStyle(fontWeight: FontWeight.bold),),
                 )
             ),
           ]),

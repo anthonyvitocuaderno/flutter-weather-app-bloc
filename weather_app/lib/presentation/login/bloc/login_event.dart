@@ -8,5 +8,8 @@ abstract class LoginEvent extends Equatable {
 }
 
 class LoginSubmitted extends LoginEvent {
-  const LoginSubmitted();
+  final String name;
+  final String url;
+
+  const LoginSubmitted(this.name, this.url);
 }

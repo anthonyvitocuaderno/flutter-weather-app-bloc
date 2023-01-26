@@ -5,7 +5,9 @@ import 'package:weather_app/presentation/login/bloc/login_bloc.dart';
 import 'package:weather_app/util/string_utils.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+  final VoidCallback onSubmitted;
+
+  const LoginForm(this.onSubmitted, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class LoginForm extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             // TODO form fields
-            _LoginButton(),
+            _LoginButton(onSubmitted),
           ],
         ),
       ),
@@ -34,6 +36,9 @@ class LoginForm extends StatelessWidget {
 }
 
 class _LoginButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  const _LoginButton(this.onPressed);
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LoginBloc, LoginState>(
@@ -44,7 +49,7 @@ class _LoginButton extends StatelessWidget {
             : ElevatedButton(
           key: const Key('loginForm_continue_raisedButton'),
           onPressed: () {
-            context.read<LoginBloc>().add(const LoginSubmitted());
+            onPressed();
           },
           child: Text(getStrings(context).login),
         );
