@@ -1,16 +1,18 @@
 # weather_app
 
-Ehlrich Flutter 24 Hour Code Challenge
 
-## Getting Started
+<h1 align="center">Weather App</h1>
 
-This project is a starting point for a Flutter application.
+<h4 align="center">
+  Ehlrich Flutter 24 Hour Code Challenge
+</h4>
 
-A few resources to get you started if this is your first Flutter project:
+## Development
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Uses BLoC (Business Logic Component) pattern to manage app state. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Screen/Page components:
+- the page itself
+- bloc, event, state
+- models
+- widgets
